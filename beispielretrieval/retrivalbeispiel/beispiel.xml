@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<posts>
+   <DOC>
+      <DOCNO>1</DOCNO>
+      <TITLE>Databases are cool. I really love my Database how could you not.</TITLE>
+   </DOC>
+   <DOC>
+      <DOCNO>2</DOCNO>
+      <TITLE>I am new to Information Retrieval. Do I need a Database or Index?</TITLE>
+   </DOC>
+   <DOC>
+      <DOCNO>3</DOCNO>
+      <TITLE>What is your favorite Database language? Do you use an ORM or not?</TITLE>
+   </DOC>
+</posts>
