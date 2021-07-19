@@ -3,6 +3,7 @@ import csv
 pt.init()
 
 def testingindex():
+   #path to the indexbeispiel folder
    files = pt.io.find_files("/home/wilhelm/Uni/retrievalsystem/beispielretrieval/indexbeispiel/")
    indexer = pt.TRECCollectionIndexer("./wt2g_index", verbose=True, blocks=False, overwrite=True)
    indexer.setProperty("max.term.length", "20")
@@ -27,7 +28,8 @@ def testingindex():
    pt.io.write_results(res, "tf_idf_results.res")
 
 def testingretrieval():
-   files = pt.io.find_files("/home/wilhelm/Uni/retrievalsystem/beispielretrieval/retrivalbeispiel/")
+   #path to the retrievalbeispiel folder
+   files = pt.io.find_files("/home/wilhelm/Uni/retrievalsystem/beispielretrieval/retrievalbeispiel/")
    indexer = pt.TRECCollectionIndexer("./wt2g_index", verbose=True, blocks=False, overwrite=True)
    indexer.setProperty("max.term.length", "20")
    indexer.setProperty("tokeniser", "UTFTokeniser")
