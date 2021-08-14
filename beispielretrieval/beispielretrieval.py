@@ -4,8 +4,9 @@ pt.init()
 
 def testingindex():
    #path to the indexbeispiel folder
+   print("this is the index test")
    files = pt.io.find_files("/home/wilhelm/Uni/retrievalsystem/beispielretrieval/indexbeispiel/")
-   indexer = pt.TRECCollectionIndexer("./wt2g_index", verbose=True, blocks=False, overwrite=True)
+   indexer = pt.TRECCollectionIndexer("./example_index", verbose=True, blocks=False, overwrite=True)
    indexer.setProperty("max.term.length", "20")
    indexer.setProperty("tokeniser", "UTFTokeniser")
    indexer.setProperty("FieldTags.process", "TITLE")
@@ -51,7 +52,3 @@ def testingretrieval():
    tf_idf_retrieval = pt.BatchRetrieve(index, wmodel="TF_IDF", properties={"tokeniser": "UTFTokeniser"})
    res = tf_idf_retrieval.search("Database Index")
    pt.io.write_results(res, "tf_idf_results.res")
-
-if __name__ == '__main__':
-   testingretrieval()
-   testingindex()

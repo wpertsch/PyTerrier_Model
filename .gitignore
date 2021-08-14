@@ -1,1 +1,5 @@
 .idea
+
+backend/venv/
+
+**.res
