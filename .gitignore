@@ -1,2 +1,7 @@
-gitignore
 
+#venv
+backend/venv/
+
+.gitignore
+
+.idea
